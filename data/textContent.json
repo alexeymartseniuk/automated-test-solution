@@ -4,7 +4,10 @@
       "title": "Here's Why So Many Seniors Have Added This Walk-In Bath In 2020...",
       "costToInstallComponent": {
         "wrongZip": "Enter your ZIP code.",
-        "emptyUserData": "Please fill out this field."
+        "emptyUserData": "Please fill out this field.",
+        "outOfAreaMessage": "Thank you for your interest, we will contact you when our service becomes available in your area!",
+        "wrongEmail": "Wrong email.",
+        "wrongPhoneNumber": "Wrong phone number."
       }
     },
     "thankYouPage": {

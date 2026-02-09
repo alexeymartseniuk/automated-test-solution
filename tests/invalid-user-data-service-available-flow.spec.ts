@@ -1,21 +1,19 @@
 import { test, expect } from '../fixtures';
 import textContent from '../data/textContent.json'
+import data from '../data/userData.json'
 
 test('Submitting with an empty user data shows a validation error', async ({ pageManager } ) => {
     const { basePage, costToInstallForm } = pageManager;
 
-    const zipCode = '48001';
-    const walkInTubeReasons = [
-        'Independence',
-        'Safety',
-        'Therapy',
-        'Other',
-    ];
-    const propertyOption = 'Owned House / Condo';
+    const {
+        zipCodes: { serviceAvailable: serviceAvailableCode },
+        walkInTubeReasons,
+        propertyOption,
+    } = data.userData;
 
-    await test.step('Step 1: Enter valid ZIP code', async()  => {
+    await test.step('Step 1: Enter service available ZIP code', async()  => {
         await basePage.goTo();
-        await costToInstallForm.enterZipCode(zipCode);
+        await costToInstallForm.enterZipCode(serviceAvailableCode);
     });
 
     await test.step('Step 2: Select all options in "Why are you interested in a walk-in tub?" step', async()  => {
@@ -26,7 +24,7 @@ test('Submitting with an empty user data shows a validation error', async ({ pag
         await costToInstallForm.selectPropertyType(propertyOption);
     });
 
-    await test.step('Step 4: Enter valid user name and email', async()  => {
+    await test.step('Step 4: Enter invalid user name and email', async()  => {
         await costToInstallForm.fillUserDetails('', '');
     });
 

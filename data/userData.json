@@ -1,0 +1,27 @@
+{
+  "userData": {
+    "zipCodes": {
+      "outOfArea": "11111",
+      "serviceAvailable": "68901"
+    },
+    "walkInTubeReasons": [
+      "Independence",
+      "Safety",
+      "Therapy",
+      "Other"
+    ],
+    "propertyOption": "Owned House / Condo",
+    "name": {
+      "valid": "Test user",
+      "invalid": "Test"
+    },
+    "email": {
+      "valid": "test@user.com",
+      "invalid": "test"
+    },
+    "phoneNumber": {
+      "valid": "0123456789",
+      "invalid": "0123456789"
+    }
+  }
+}

@@ -11,6 +11,8 @@ export default class CostToInstallComponent {
     readonly phoneInput: Locator;
     readonly goToEstimateButton: Locator;
     readonly submitRequestButton: Locator;
+    readonly outOfAreaEmail: Locator;
+    readonly submitButton: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -22,6 +24,8 @@ export default class CostToInstallComponent {
         this.phoneInput = this.rootElement.locator('input[name="phone"]');
         this.goToEstimateButton = this.rootElement.getByRole('button', { name: 'Go To Estimate' });
         this.submitRequestButton = this.rootElement.getByRole('button', { name: 'Submit Your Request' });
+        this.outOfAreaEmail = this.rootElement.getByRole('textbox', { name: 'Email Address' });
+        this.submitButton = this.rootElement.getByRole('button', { name: 'Submit' });
     }
 
     private getQuizCard(text: string): Locator {
@@ -55,5 +59,10 @@ export default class CostToInstallComponent {
     async fillPhoneNumber(phoneNumber: string): Promise<void> {
         await this.phoneInput.fill(phoneNumber);
         await this.submitRequestButton.click();
+    }
+
+    async fillOutOfAreaEmail(email: string) : Promise<void> {
+        await this.outOfAreaEmail.fill(email);
+        await this.submitButton.click();
     }
 }

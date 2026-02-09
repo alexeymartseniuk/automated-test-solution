@@ -75,19 +75,13 @@ See more information about [Playwright reports](https://playwright.dev/docs/test
 ## Full list of scenarios to be automated.
 ### 1. Functional testing - happy path
 
-**1.1.** Submit form with all quiz options selected
-Submit the "Cost to Install" form selecting **all** options in "Why are you interested in a walk-in tub?" and validate the "Thank you!" page appears.
-- ZIP code: `48001`
-- Why interested: `Independence`, `Safety`, `Therapy`, `Other`
-- Property type: `Owned house`
-- Name: `Test User`, Email: `test@email.com`
-- Phone: `(222) 222-2222`
+**1.1.** Submit "service available" form with all quiz options selected
+Submit the "service available" form selecting **all** options in "Why are you interested in a walk-in tub?" and validate the "Thank you!" page appears.
 
 **1.2.** Submit form with a single quiz option
 Same as 1.1 but selecting **only** "Independence". Validate the "Thank you!" page.
 
-**1.3.** Submit ZIP code via Enter key
-Enter a valid Michigan ZIP code (e.g. `48001`), press **Enter**, and validate the message "Why are you interested in a walk-in tub?" appears.
+**1.3.** Submit "out-of-area" form.
 
 **1.4.** Paste ZIP code from clipboard
 Paste a ZIP code from the clipboard into the input field and submit the form successfully.
@@ -96,7 +90,7 @@ Paste a ZIP code from the clipboard into the input field and submit the form suc
 Validate the primary video element appears and **autoplays** when the landing page is opened.
 
 **1.6.** Progress bar validation
-Verify the progress bar in the "Cost to Install" form reflects the correct step numbers and labels.
+Verify the progress bar in the "out-of-area" and "service available" forms reflects the correct step numbers and labels.
 
 **1.7.** Secondary video autoplay
 Validate the secondary video element appears and **autoplays** when the landing page is opened.
@@ -143,6 +137,8 @@ Validate **both** videos resume playback when clicked again after pausing.
 
 **2.13.** Deny geolocation permissions and verify `Available in Mazovia` badge behavior.
 > ⚠️ Expected result needs clarification.
+
+**2.14.** Enter invalid email for out-of-area form and validate error message.
 
 ### 3. UI page structure and content
 
@@ -194,19 +190,20 @@ Validate **both** videos resume playback when clicked again after pausing.
 3. Geolocation mismatch - header badge says `Mazovia`, form heading says `Michigan`.
 4. Bath Walls color swatches show only two repeating colors.
 5. Typo: `Our Price Promice` -> should be `Our Price Promise`.
-6. Progress bar step numbering - `What type of property is this for?` shows step `2`, expected `3`.
+6. Service available flow - Progress bar step numbering - `What type of property is this for?` shows step `2`, expected `3`.
+7. Out-of-area flow -  Progress bar step numbering - always shows current step as 1 of.
 
 ## Top 5 priority scenarios
 
-> The core purpose of this landing page is the `Cost to Install` form.
+> The core purpose of this landing page is the `Cost to Install` form with service available and out of area flows.
 > A broken form means zero conversions and zero revenue.
 > That's why the top 5 focus on form functionality.
 
-1. Submit form with all quiz options selected.
-2. Submit form with a single quiz option.
-3. Verify progress bar in the form.
-4. Empty ZIP code shows error `Enter your ZIP code.`
-5. Empty name/email shows validation error.
+1. Submit service available form.
+2. Submit out of area form.
+3. Validate error message if user enters invalid email for out of area form.
+4. Validate error message if user enters invalid username and email for service available form.
+5. Validate error message if user enters invalid phone number for service available form.
 
 ## Ideas for improving the framework
 - **ESLint** - unify coding standards and catch errors early.
@@ -214,3 +211,4 @@ Validate **both** videos resume playback when clicked again after pausing.
 - **Husky and lint-staged** - run linters on precommit.
 - `.env` to support for env variable management.
 - `Chance library` - to generate random data instead of hardcoded.
+- `Facroty` - for centralized object creation.

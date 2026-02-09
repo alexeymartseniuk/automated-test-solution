@@ -1,21 +1,24 @@
 import { test, expect } from '../fixtures';
+import data from '../data/userData.json';
 
-test('Submit form “Cost to install form” by selecting one option only in “Why are you interested in a walk-in tub?” step.', async ({ pageManager } ) => {
+test('Submit form “Cost to install" form with valid service available code.', async ({ pageManager } ) => {
     const { basePage, costToInstallForm, thankYouPage } = pageManager;
 
-    const zipCode = '48001';
-    const walkInTubeReasons = 'Independence';
-    const propertyOption = 'Owned House / Condo';
-    const userName = 'Test user';
-    const userEmail = 'test@email.com';
-    const phoneNumber = '(222)222-2222';
+    const {
+        zipCodes: { serviceAvailable: serviceAvailableCode },
+        walkInTubeReasons,
+        propertyOption,
+        name: { valid: userName },
+        email: { valid: userEmail },
+        phoneNumber: { valid: phoneNumber }
+    } = data.userData;
 
-    await test.step('Step 1: Enter valid ZIP code', async()  => {
+    await test.step('Step 1: Enter service available ZIP code', async()  => {
         await basePage.goTo();
-        await costToInstallForm.enterZipCode(zipCode);
+        await costToInstallForm.enterZipCode(serviceAvailableCode);
     });
 
-    await test.step('Step 2: Select option - Independence in "Why are you interested in a walk-in tub?" step', async()  => {
+    await test.step('Step 2: Select all options in "Why are you interested in a walk-in tub?" step', async()  => {
         await costToInstallForm.selectWalkInTubReasons(walkInTubeReasons);
     });
 
