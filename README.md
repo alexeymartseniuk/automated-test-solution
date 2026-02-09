@@ -213,3 +213,4 @@ Validate **both** videos resume playback when clicked again after pausing.
 - **Prettier** - auto format code for consistent style.
 - **Husky and lint-staged** - run linters on precommit.
 - `.env` to support for env variable management.
+- `Chance library` - to generate random data instead of hardcoded.
