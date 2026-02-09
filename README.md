@@ -20,6 +20,11 @@ A POC framework written in TS using Playwright to test landing page.
 
 ## Setup Instructions
 1. Clone the project repository:
+
+```shell
+git clone git@github.com:alexeymartseniuk/automated-test-solution.git
+```
+
 2. Install project dependencies:
 
 ```shell
