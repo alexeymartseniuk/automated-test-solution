@@ -5,12 +5,13 @@ A POC framework written in TS using Playwright to test landing page.
 ## Table of Contents
 
 - [Prerequisites](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
-- [Getting Started](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
-- [Running Tests](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
-- [Project structure](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
-- [Full list of scenarios to be automated](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
-- [Found bugs](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
-- [Top 5 priority scenarios](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
+- [Getting Started](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#setup-instructions)
+- [Running Tests](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#setup-instructions)
+- [Test Reports](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#test-reports)
+- [Project structure](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#project-structure)
+- [Full list of scenarios to be automated](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#full-list-of-scenarios-to-be-automated)
+- [Found bugs](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#found-bugs)
+- [Top 5 priority scenarios](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#found-bugs)
 
 ## Prerequisites
 1. node.js (version 18 or later).
