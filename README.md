@@ -2,6 +2,16 @@
 
 A POC framework written in TS using Playwright to test landing page.
 
+## Table of Contents
+
+- [Prerequisites](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
+- [Getting Started](ghttps://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
+- [Running Tests](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
+- [Project structure](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
+- [Full list of scenarios to be automated](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
+- [Found bugs](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
+- [Top 5 priority scenarios](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
+
 ## Prerequisites
 1. node.js (version 18 or later).
 2. npm (version 9 or later).
@@ -46,6 +56,8 @@ npx playwright show-report
 See more information about [Playwright reports](https://playwright.dev/docs/test-reporters#built-in-reporters)
 
 ## Project structure
+`.github/workflowsl` - contains file in yml format with tests pipeline. 
+
 `data/textContent.json` - This file serves as a centralized content/copy repository for the application's UI text.
 
 `fixtures/index.ts` - defines custom PW test fixtures, extending the base test object.
@@ -61,7 +73,7 @@ See more information about [Playwright reports](https://playwright.dev/docs/test
 ## Full list of scenarios to be automated.
 ### 1. Functional testing - happy path
 
-### 1.1. Submit form with all quiz options selected
+**1.1.** Submit form with all quiz options selected
 Submit the "Cost to Install" form selecting **all** options in "Why are you interested in a walk-in tub?" and validate the "Thank you!" page appears.
 - ZIP code: `48001`
 - Why interested: `Independence`, `Safety`, `Therapy`, `Other`
@@ -69,34 +81,34 @@ Submit the "Cost to Install" form selecting **all** options in "Why are you inte
 - Name: `Test User`, Email: `test@email.com`
 - Phone: `(222) 222-2222`
 
-### 1.2. Submit form with a single quiz option
+**1.2.** Submit form with a single quiz option
 Same as 1.1 but selecting **only** "Independence". Validate the "Thank you!" page.
 
-### 1.3. Submit ZIP code via Enter key
+**1.3.** Submit ZIP code via Enter key
 Enter a valid Michigan ZIP code (e.g. `48001`), press **Enter**, and validate the message "Why are you interested in a walk-in tub?" appears.
 
-### 1.4. Paste ZIP code from clipboard
+**1.4.** Paste ZIP code from clipboard
 Paste a ZIP code from the clipboard into the input field and submit the form successfully.
 
-### 1.5. Primary video autoplay
+**1.5.** Primary video autoplay
 Validate the primary video element appears and **autoplays** when the landing page is opened.
 
-### 1.6. Progress bar validation
+**1.6.** Progress bar validation
 Verify the progress bar in the "Cost to Install" form reflects the correct step numbers and labels.
 
-### 1.7. Secondary video autoplay
+**1.7.** Secondary video autoplay
 Validate the secondary video element appears and **autoplays** when the landing page is opened.
 
-### 1.8. Video pause on click
+**1.8.** Video pause on click
 Validate **both** videos pause when the user clicks on them during playback.
 
-### 1.9. Video resume on click
+**1.9.** Video resume on click
 Validate **both** videos resume playback when clicked again after pausing.
 
-### 1.10. Video audio behavior
+**1.10.** Video audio behavior
 > ⚠️ **Needs clarification** — Expected audio behavior is not yet defined.
 
-### 1.11. "Available in Mazovia" badge
+**1.11.** "Available in Mazovia" badge
 > ⚠️ **Needs clarification** — Expected badge behavior in the header is not yet defined.
 
 ### 2. Functional testing - negative flows
@@ -156,13 +168,21 @@ Validate **both** videos resume playback when clicked again after pausing.
 ## 4. Cross browser and responsive
 
 **4.1.** Chrome desktop — latest version.
+
 **4.2.** Safari desktop — latest version.
+
 **4.3.** Firefox desktop — latest version.
+
 **4.4.** Edge desktop — latest version.
+
 **4.5.** Mobile viewport.
+
 **4.6.** Tablet viewport.
+
 **4.7.** No text overlapping when resizing browser window from desktop to mobile.
+
 **4.8.** `Estimate your cost` button behavior across viewports.
+
 **4.9.** Large desktop viewport (full monitor).
 
 ## Found bugs
@@ -180,8 +200,8 @@ Validate **both** videos resume playback when clicked again after pausing.
 > A broken form means zero conversions and zero revenue.
 > That's why the top 5 focus on form functionality.
 
-1. **1.1** — Submit form with all quiz options selected.
-2. **1.2** — Submit form with a single quiz option.
-3. **1.6** — Verify progress bar in the form.
-4. **2.1** — Empty ZIP code shows error `Enter your ZIP code.`
-5. **2.8** — Empty name/email shows validation error.
+1. Submit form with all quiz options selected.
+2. Submit form with a single quiz option.
+3. Verify progress bar in the form.
+4. Empty ZIP code shows error `Enter your ZIP code.`
+5. Empty name/email shows validation error.
