@@ -5,7 +5,7 @@ A POC framework written in TS using Playwright to test landing page.
 ## Table of Contents
 
 - [Prerequisites](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
-- [Getting Started](ghttps://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
+- [Getting Started](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
 - [Running Tests](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
 - [Project structure](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
 - [Full list of scenarios to be automated](https://github.com/alexeymartseniuk/automated-test-solution?tab=readme-ov-file#prerequisites)
@@ -205,3 +205,9 @@ Validate **both** videos resume playback when clicked again after pausing.
 3. Verify progress bar in the form.
 4. Empty ZIP code shows error `Enter your ZIP code.`
 5. Empty name/email shows validation error.
+
+## Ideas for improving the framework
+- **ESLint** - unify coding standards and catch errors early.
+- **Prettier** - auto format code for consistent style.
+- **Husky and lint-staged** - run linters on precommit.
+- `.env` to support for env variable management.
