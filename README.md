@@ -58,7 +58,7 @@ npx playwright show-report
 See more information about [Playwright reports](https://playwright.dev/docs/test-reporters#built-in-reporters)
 
 ## Project structure
-`.github/workflowsl` - contains file in yml format with tests pipeline. 
+`.github/workflowsl` - contains file in yml format with tests pipeline. Pipeline can be triggered manually via GitHub Actions. 
 
 `data/textContent.json` - This file serves as a centralized content/copy repository for the application's UI text.
 
