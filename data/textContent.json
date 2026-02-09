@@ -1,0 +1,14 @@
+{
+  "pages": {
+    "mainPage": {
+      "title": "Here's Why So Many Seniors Have Added This Walk-In Bath In 2020...",
+      "costToInstallComponent": {
+        "wrongZip": "Enter your ZIP code.",
+        "emptyUserData": "Please fill out this field."
+      }
+    },
+    "thankYouPage": {
+      "title": "Thank you!"
+    }
+  }
+}
